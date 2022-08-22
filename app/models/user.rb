@@ -6,5 +6,6 @@ class User < ApplicationRecord
   has_many :bookings, dependent: :destroy
   has_many :games, dependent: :destroy
 
-  validates :first_name, :last_name, :email, presence: true, uniqueness: true
+  validates :first_name, :last_name, :email, presence: true
+  validates :email, uniqueness: true
 end
