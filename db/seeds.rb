@@ -5,9 +5,9 @@ puts "Cleaning DB..."
 
 Booking.destroy_all
 Game.destroy_all
-User.destroy
+User.destroy_all
 
-puts "Creating Games..."
+puts "Creating games..."
 
 file = URI.open("https://res.cloudinary.com/dxryafvlv/image/upload/v1661174526/Rent%20A%20Game/uno.jpg")
 Game.new(
@@ -59,7 +59,6 @@ game = Game.new(
   address: Faker::Address.full_address,
   price_per_day: rand(1.0..10.00).round(2),
   disponibility: true
-  photo:
 )
 game.photo.attach(io: file, filename: "aventuriers_du_rail.jpg", content_type: "image/jpg")
 game.save
@@ -102,4 +101,4 @@ user.create!(
 )
 
 
-puts "All Done!"
+puts "It's All Done Man!"
