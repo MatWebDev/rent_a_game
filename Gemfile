@@ -54,11 +54,13 @@ gem "simple_form", github: "heartcombo/simple_form"
 
 gem "devise"
 
+# faker pour faker les choses
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "dotenv-rails"
-
 end
 
 group :development do
