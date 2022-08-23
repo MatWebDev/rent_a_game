@@ -1,4 +1,7 @@
 class GamesController < ApplicationController
+
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @games = Game.all
   end
@@ -6,7 +9,7 @@ class GamesController < ApplicationController
   def create
     @game = Game.create!(game_params)
     if @game.save
-      redirect_to root_path, notice: "Votre annonce à bien été créee."
+      redirect_to root_path, notice: "Votre annonce a bien été créée."
     else
       render :new, status: :unprocessable_entity
     end
