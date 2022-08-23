@@ -6,15 +6,6 @@ class GamesController < ApplicationController
     @games = Game.all
   end
 
-  def create
-    @game = Game.create!(game_params)
-    if @game.save
-      redirect_to root_path, notice: "Votre annonce a bien été créée."
-    else
-      render :new, status: :unprocessable_entity
-    end
-  end
-
   def show
     @game = game.find(params[:id])
   end
@@ -23,6 +14,15 @@ class GamesController < ApplicationController
     @game = game.new
   end
 
+  def create
+    @game = Game.create!(game_params)
+    if @game.save
+      redirect_to root_path, notice: "Votre annonce a bien été créée."
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+  
   def destroy
     @game = game.find(params[:id])
     @game.destroy
