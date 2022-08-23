@@ -7,11 +7,11 @@ class GamesController < ApplicationController
   end
 
   def show
-    @game = game.find(params[:id])
+    @game = Game.find(params[:id])
   end
 
   def new
-    @game = game.new
+    @game = Game.new
   end
 
   def create
@@ -22,9 +22,9 @@ class GamesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-  
+
   def destroy
-    @game = game.find(params[:id])
+    @game = Game.find(params[:id])
     @game.destroy
     redirect_to games_path, status: :see_other
   end
