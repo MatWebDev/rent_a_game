@@ -1,5 +1,58 @@
-<h1>Games#index</h1>
-<p>Find me in app/views/games/index.html.erb</p>
-<% @games.each do |game| %>
-<%= game.name %>
-<% end %>
+<%# -----------BANNER------------- %>
+
+    <div class="banner-rent-a-game">
+    <div class="container">
+      <h3 class="display-4 airbnb"> Rent A game </h3>
+      <h3 class="display-4 air-descrip">Louez des jeux près de chez vous </h3>
+      <div class="input-group">
+        <input class="form-control" type="text" placeholder="Trouvez le jeu parfait">
+        <span class="input-group-btn">
+          <button class="btn btn-secondary btn-lg src-button" type="submit"> Search </button>
+        </div>
+    </div>
+    </div>
+
+<%# -----------CATEGORY------------- %>
+<!-- Categories Slider -->
+
+     <div class="container slider">
+       <div class="row">
+       <div class="col">
+       <div class="house">
+       <img src="https://images.pexels.com/photos/8159115/pexels-photo-8159115.jpeg?auto=compress&cs=tinysrgb&w=600">
+         <p> Jeux de sociétés </p>
+         </div>
+         </div>
+         <div class="col">
+           <div class="experiences">
+             <img src="https://p1.storage.canalblog.com/21/62/440866/26156110.jpg">
+             <p> Jeux de plateaux </p>
+           </div>
+         </div>
+         <div class="col">
+         <div class="restraunt">
+           <img src="https://www.economie.gouv.fr/files/styles/image_contenu_article_espace/public/files/directions_services/dgccrf/imgs/fiches_pratiques/2019/Jeux-en-ligne.jpg?itok=TNOsY2Xc">
+           <p> Jeux vidéos </p>
+           </div>
+         </div>
+       </div>
+    </div>
+    </br>
+  </br>
+
+   <div class="main-container m-5">
+  <h2 class="my-4 fw-bold">Offres en cours</h2>
+   <% if @lists == 0 %>
+    <p class="text-blanc">Il n'y a pas d'offres pour le moment.</p>
+  <% end %>
+  <div class="cards mb-5">
+      <% @games.each do |game| %>
+          <div class="card-category"
+              style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+              url("https://i.etsystatic.com/16407439/r/il/7ecf7d/2403132002/il_1588xN.2403132002_4xh3.jpg")>
+              <%= game.name %>
+              <div class="price"><%= game.price_per_day %></div>
+          </div>
+      <% end %>
+  </div>
+</div>
