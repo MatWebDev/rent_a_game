@@ -1,15 +1,9 @@
 class GamesController < ApplicationController
+
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @games = Game.all
-  end
-
-  def create
-    @game = Game.create!(game_params)
-    if @game.save
-      redirect_to root_path, notice: "Votre annonce à bien été créee."
-    else
-      render :new, status: :unprocessable_entity
-    end
   end
 
   def show
@@ -20,8 +14,17 @@ class GamesController < ApplicationController
     @game = Game.new
   end
 
+  def create
+    @game = Game.create!(game_params)
+    if @game.save
+      redirect_to root_path, notice: "Votre annonce a bien été créée."
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
   def destroy
-    @G = Game.find(params[:id])
+    @game = Game.find(params[:id])
     @game.destroy
     redirect_to games_path, status: :see_other
   end
