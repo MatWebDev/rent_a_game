@@ -22,7 +22,7 @@ class GamesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-  
+
   def destroy
     @game = game.find(params[:id])
     @game.destroy

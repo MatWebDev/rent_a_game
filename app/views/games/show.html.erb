@@ -1,0 +1,7 @@
+<h1><%= @game.name %></h1>
+<%= cl_image_tag @game.photo.key %>
+<p><%= @game.description %></p>
+<p><%= @game.price_per_day %></p>
+
+<%= link_to 'Revenir aux jeux', root_path %>
+<%# <%= link_to 'Louer ce jeu', new_booking %>
