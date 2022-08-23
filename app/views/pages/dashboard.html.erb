@@ -1,1 +1,13 @@
 <h1>Dashboard</h1>
+<h2>Tes jeux en location</h2>
+<% current_user.games.each do |game| %>
+  <li><%= game.name %></li>
+<% end %>
+
+<h2>Tes réservations</h2>
+<% current_user.bookings.each do |booking| %>
+  <li>
+    Jeux : <%= booking.game.name %>
+    Du <%= booking.starting_date %> au <%= booking.ending_date %>
+  </li>
+<% end %>
