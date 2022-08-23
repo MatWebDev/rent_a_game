@@ -1,5 +1,5 @@
 
-<div class="main-container">
+<div class="form-container">
   <h2 class="h2-form">Créez votre annonce</h2>
     <%= simple_form_for(@game) do |f| %>
 
@@ -37,4 +37,6 @@
           </div>
 
     <% end %>
+    <br>
+    <%= link_to "Retour à l'accueil", root_path %>
 </div>
