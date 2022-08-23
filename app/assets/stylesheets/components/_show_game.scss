@@ -60,6 +60,11 @@
   font-size: 18px;
 }
 
+a {
+  text-decoration: none;
+}
+
+
 @media(max-width: 992px) {
   .card-container {
     width: 768px;
