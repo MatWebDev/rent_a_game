@@ -6,7 +6,7 @@ class GamesController < ApplicationController
   def create
     @game = Game.create!(game_params)
     if @game.save
-      redirect_to root_path, notice: "Votre annonce à bien été créer."
+      redirect_to root_path, notice: "Votre annonce à bien été créee."
     else
       render :new, status: :unprocessable_entity
     end
@@ -29,6 +29,6 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:name, :photo)
+    params.require(:game).permit(:name, :description, :address, :price_per_day, :photo)
   end
 end
