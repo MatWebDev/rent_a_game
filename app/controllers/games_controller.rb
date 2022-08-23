@@ -15,9 +15,10 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = Game.create!(game_params)
-    if @game.save
-      redirect_to root_path, notice: "Votre annonce a bien été créée."
+    @game = Game.new(game_params)
+    @game.user = current_user
+    if @game.save!
+      redirect_to dashboard_path, notice: "Votre annonce a bien été créée."
     else
       render :new, status: :unprocessable_entity
     end
