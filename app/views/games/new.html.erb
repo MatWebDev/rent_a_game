@@ -31,11 +31,8 @@
                       input_html: { autocomplete: "price_per_day" },
                       placeholder: "Prix en euros",
                       label: "Prix par jour"%>
+          <%= f.submit value: 'Soumettre', class: "btn btn-outline-secondary"%>
       </div>
-          <div class="form-actions">
-              <%= link_to "Soumettre", dashboard_path, class: "btn btn-outline-secondary"%>
-          </div>
-
     <% end %>
     <br>
     <%= link_to "Retour à l'accueil", root_path %>
