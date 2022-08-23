@@ -91,6 +91,8 @@ game = Game.new(
   disponibility: true,
   user_id: User.all.sample.id
 )
+game.photo.attach(io: file, filename: "7_wonders.jpg", content_type: "image/jpg")
+game.save
 
 file = URI.open("https://res.cloudinary.com/dxryafvlv/image/upload/v1661172906/Rent%20A%20Game/aventuriers-du-rail.jpg")
 game = Game.new(
