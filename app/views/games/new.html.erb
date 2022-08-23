@@ -1,33 +1,40 @@
-<h2>Creez votre annonce</h2>
 
-<%= simple_form_for(@game) do |f| %>
+<div class="main-container">
+  <h2 class="h2-form">Créez votre annonce</h2>
+    <%= simple_form_for(@game) do |f| %>
 
-  <div class="form-inputs">
+      <div class="form-inputs">
+          <%= f.input :name,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "name"},
+                      placeholder: "Nom du jeu",
+                      label: "Nom"%>
 
-      <%= f.input :name,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "name" }%>
+          <%= f.input :description,
+                      required: true,
+                      input_html: { autocomplete: "description" },
+                      placeholder: "Description du jeu",
+                      label: "Description"%>
 
-        <%= f.input :photo,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "name" }%>
+          <%= f.input :photo,
+                      required: true %>
 
-      <%= f.input :description,
-                  required: true,
-                  input_html: { autocomplete: "description" } %>
+          <%= f.input :address,
+                      required: true,
+                      input_html: { autocomplete: "address" },
+                      placeholder: "Adresse",
+                      label: "Adresse"%>
 
-      <%= f.input :address,
-                  required: true,
-                  input_html: { autocomplete: "address" } %>
-
-      <%= f.input :price_per_day,
-                  required: true,
-                  input_html: { autocomplete: "price_per_day" } %>
+          <%= f.input :price_per_day,
+                      required: true,
+                      input_html: { autocomplete: "price_per_day" },
+                      placeholder: "Prix en euros",
+                      label: "Prix par jour"%>
       </div>
+          <div class="form-actions">
+              <%= link_to "Soumettre", dashboard_path, class: "btn btn-outline-secondary"%>
+          </div>
 
-      <div class="form-actions">
-        <%= f.button :submit, "Créer" %>
-      </div>
-<% end %>
+    <% end %>
+</div>
