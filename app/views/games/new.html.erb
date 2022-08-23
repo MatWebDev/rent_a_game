@@ -33,7 +33,9 @@
                       label: "Prix par jour"%>
       </div>
           <div class="form-actions">
-            <%= f.button :submit, "Soumettre", class: "btn btn-outline-secondary" %>
+            <%#  WARNING CHANGE THE ROUTE !!! %>
+              <%= link_to "Soumettre", root_path, class: "btn btn-outline-secondary"%>
+
           </div>
     <% end %>
 </div>
