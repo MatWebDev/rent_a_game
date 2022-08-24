@@ -45,14 +45,18 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+
+  h2 {
+    font-size: 24px;
+  }
 }
 
 .card-trip-infos .card-trip-pricing {
   position: absolute;
   right: 16px;
-  top: -20px;
-  width: 144px;
-  background-color: #cf464c ;
+  top: -25px;
+  width: 170px;
+  background-color: $red ;
   padding: 10px 16px;
   border-radius: 75px;
   text-align: center;
@@ -60,9 +64,50 @@
   font-size: 18px;
 }
 
-a {
-  text-decoration: none;
+.bouton {
+  position: absolute;
+  left: -980px;
+  top: -450px;
+  width: 200px;
+  align-items: center;
+  background-color: #cf464d9a;
+  padding: 9px 16px;
+  border-radius: 75px;
+  text-align: center;
+  color: $lightBG;
+  font-size: 32px;
+  transition: ease-in-out 0.4s;
+
+  &:hover {
+    color: white;
+    background-color: $red;
+  }
 }
+
+.back-home {
+  text-align: center;
+  margin-top: 30px;
+
+  a {
+    text-decoration: none;
+    color: $gray;
+    font-size: 32px;
+    transition: ease-in-out 0.4s;
+    
+    &:hover {
+      color: rgb(56, 54, 54);
+      font-weight: 500;
+      border-bottom: solid rgb(56, 54, 54) 1px;
+    }
+  }
+}
+
+
+.game_owner {
+  opacity: 0.6;
+  font-size: 18px;
+}
+
 
 
 @media(max-width: 992px) {
