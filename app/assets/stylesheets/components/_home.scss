@@ -7,6 +7,7 @@
   position: relative;
   z-index: 2;
 }
+
 .textbanner{
   align-items: center;
   justify-content: center;
@@ -26,6 +27,7 @@
 
 
 }
+
 .card-category {
   width: 300px;
   height: 250px;
@@ -38,6 +40,7 @@
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
+
 .main-containerok{
   margin: 0 auto;
   border-radius: 20px;
@@ -56,6 +59,7 @@
     color: black;
    }
 }
+
 .image{
   width: 320px;
   height: 340px;
@@ -69,6 +73,7 @@
   -o-border-radius: 8px;
   padding-top: 12px;
 }
+
 .prix{
   background-color: $red;
   color: white;
@@ -90,6 +95,15 @@ text-align: center;
   padding-top: 10px;
   padding-bottom: 40px;
   margin-right: 4px;
+  h3 {
+    margin-top: 20px;
+  }
+  p {
+    color: grey;
+    margin-bottom: 0px;
+    font-size: 15px;
+    opacity: 60%;
+  }
 }
 
 .descrip{
