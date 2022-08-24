@@ -13,3 +13,20 @@ form input[type="number"]::-webkit-inner-spin-button {
   margin: 0 auto;
 }
 
+.back-home {
+  text-align: center;
+  margin-top: 30px;
+
+  a {
+    text-decoration: none;
+    color: $gray;
+    font-size: 32px;
+    transition: ease-in-out 0.4s;
+    
+    &:hover {
+      color: rgb(56, 54, 54);
+      font-weight: 500;
+      border-bottom: solid rgb(56, 54, 54) 1px;
+    }
+  }
+}
