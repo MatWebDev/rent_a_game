@@ -1,20 +1,19 @@
-<div class="main-banner" style="background-image: linear-gradient(90deg, rgba(255,255,255,0.4009978991596639) 0%, rgba(255,255,255,0.4) 100%), url(' <%= cl_image_path @game.photo.key %>')">
+<div class="main-banner" style="background-image: linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 100%), url(' <%= cl_image_path @game.photo.key %>')">
+  
   <div class="card-container">
     <div class="card-trip">
       <%= cl_image_tag @game.photo.key %>
       <div class="card-trip-infos">
         <div>
-          <h2><%= @game.name %></h2>
+          <h2><%= @game.name %><%= @game.user.first_name %></h2>
           <p><%= @game.description %></p>
-          <p><%= @game.user %></p>
         </div>
         <h2 class="card-trip-pricing"><%= @game.price_per_day %><%= "€ /jour" %></h2>
       </div>
     </div>
+    <%= link_to 'Réserver ce jeu', new_game_booking_path(@game) %>
     <%= link_to 'Revenir aux jeux', root_path %>
   </div>
 </div>
-
-
 
 

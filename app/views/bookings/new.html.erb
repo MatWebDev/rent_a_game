@@ -1,0 +1,20 @@
+<div class="form-container">
+    <h2>Réservez ce jeu</h2>
+    <%= simple_form_for [@game, @booking] do |f| %>
+      <div class="form-inputs">
+          <%= f.input :starting_date,
+                      as: :date,
+                      html5: true,
+                      required: true,
+                      label: "Date de début"%>
+
+          <%= f.input :ending_date,
+                      as: :date,
+                      html5: true,
+                      required: true,                      
+                      label: "Date de fin"%>
+
+          <%= f.submit value: 'Soumettre', class: "btn btn-outline-secondary"%>
+      </div>
+    <% end %>
+  </div>
