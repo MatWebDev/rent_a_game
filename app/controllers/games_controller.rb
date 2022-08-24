@@ -21,6 +21,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
 
   def create
     @game = Game.new(game_params)
+    @game.disponibility = true
     @game.user = current_user
     if @game.save!
       redirect_to dashboard_path, notice: "Votre annonce a bien été créée."
@@ -31,7 +32,8 @@ skip_before_action :authenticate_user!, only: [:index, :show]
 
   def update
     @game = Game.find(params[:id])
-    @game.disponibility = true
+    @game.update(disponibility: true)
+    redirect_to root_path
   end
 
   def destroy
