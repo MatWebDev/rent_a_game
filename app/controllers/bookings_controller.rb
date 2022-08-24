@@ -1,6 +1,6 @@
-class BookingController < ApplicationController
+class BookingsController < ApplicationController
   def new
-    @game = game.find(params[:game_id])
+    @game = Game.find(params[:game_id])
     @booking = Booking.new
     @user = current_user
   end
@@ -8,13 +8,13 @@ class BookingController < ApplicationController
   def create
     game = Game.find(params[:game_id])
     user = current_user
-    starting_date = Date.new(params[:starting_date]).mjd
-    ending_date = Date.new(params[:ending_date]).mjd
-    rent_time = ending_date - starting_date
+    starting_date = Date.parse(params[:booking][:starting_date])
+    ending_date = Date.parse(params[:booking][:ending_date])
+    rent_time = ending_date.mjd - starting_date.mjd
     total_price = game.price_per_day * rent_time
     @booking = Booking.new(game: game, user: user, total_price: total_price, starting_date: starting_date, ending_date: ending_date)
     @booking.save
-    redirect_to root_path
+    redirect_to dashboard_path
   end
 
   def destroy
