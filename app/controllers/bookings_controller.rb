@@ -14,6 +14,8 @@ class BookingsController < ApplicationController
     total_price = game.price_per_day * rent_time
     @booking = Booking.new(game: game, user: user, total_price: total_price, starting_date: starting_date, ending_date: ending_date)
     @booking.save
+    @game_booked = @booking.game
+    @game_booked.update!(disponibility: false)
     redirect_to dashboard_path
   end
 
