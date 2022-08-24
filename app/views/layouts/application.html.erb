@@ -15,11 +15,7 @@
   <body>
 
     <%= render "shared/flashes" %>
-    <% if params[:controller] == "games" && params[:action] == "index" %>
     <%= render "shared/navbar" %>
-    <% else %>
-    <%= render "shared/navbar2" %>
-    <% end %>
     <%= yield %>
   </body>
 </html>

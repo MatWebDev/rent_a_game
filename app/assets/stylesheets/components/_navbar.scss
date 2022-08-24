@@ -64,3 +64,56 @@ a:last-child {
     }
 }
 }
+
+
+
+.navbar-lewagon {
+  width: 100vw;
+  display: flex;
+  z-index: 999;
+  position: absolute;
+  justify-content: space-between;
+  padding-top: 8px;
+  a{
+    text-decoration: none;
+    font-family: "Nunito", "Helvetica", "sans-serif";
+    color: white;
+    font-size: 18px;
+    padding-left: 10px;
+    &:hover {
+      color: #ded9d9;
+
+    }
+}
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+
+.navbar-lewagon a {
+  padding-left: 0;
+  display: flex;
+  width: 130px;
+}
+
+.dropdown-item{
+  color: black !important
+}
+.dropdown-menu{
+  border-radius: 15px !important;
+}
+.boxlogin{
+  width: 60px;
+
+}
+
+.bloc {
+  height: 60px;
+  background-color: $red;
+}
