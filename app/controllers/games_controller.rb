@@ -3,6 +3,12 @@ skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @games = Game.all
+    @markers = @games.geocoded.map do |game|
+      {
+        lat: game.latitude,
+        lng: game.longitude
+      }
+    end
   end
 
   def show
