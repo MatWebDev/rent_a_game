@@ -29,6 +29,11 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     end
   end
 
+  def update
+    @game = Game.find(params[:id])
+    @game.disponibility = true
+  end
+
   def destroy
     @game = Game.find(params[:id])
     @game.destroy
