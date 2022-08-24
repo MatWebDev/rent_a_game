@@ -1,0 +1,23 @@
+.dashboard-card{
+  width: 100vw;
+  height: auto;
+  background-color: white;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  padding: 15px;
+}
+.dashboard-card li{
+  list-style: none;
+  font-size: 18px;
+  color: darkred;
+}
+.gras{
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: $white;
+  background-color: $red;
+}
