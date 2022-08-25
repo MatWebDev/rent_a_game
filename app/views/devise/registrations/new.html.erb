@@ -1,5 +1,4 @@
 <div class="bloc"></div>
-
 <div class="form-container">
   <h2>Sign up</h2>
 
@@ -28,13 +27,14 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Sign up", class: "btn btn-outline-secondary"%>
+      <%= f.button :submit, "Sign up", class: "btn btn-outline-secondary" %>
     </div>
   <% end %>
 
   <div class="back-home">
-      <%= link_to "Retour à l'accueil", root_path %>
-    </div>
-
-  
+    <%= render "devise/shared/links" %>
+    <%= " - " %>
+    <%= link_to "Retour à l'accueil", root_path %>
+  </div>
 </div>
+
