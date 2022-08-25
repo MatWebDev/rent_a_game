@@ -1,13 +1,23 @@
 class GamesController < ApplicationController
-skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @games = Game.all
     @markers = @games.geocoded.map do |game|
       {
         lat: game.latitude,
-        lng: game.longitude
+        lng: game.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { game: game }),
+        image_url: helpers.asset_url("markerok1.png")
       }
+    end
+    if params[:query].present?
+      sql_query = "games.name ILIKE :query OR \
+      users.first_name ILIKE :query OR \
+      games.address ILIKE :query"
+      @games = Game.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @games = Game.all
     end
   end
 
