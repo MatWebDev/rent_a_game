@@ -1,7 +1,21 @@
 <div class="fond"><div class="banner-rent-a-game">
 <div class="textbanner">
-<%= image_tag 'logo_rent_a_game_white.svg', class: "logo" %>
-<h3>Louez des jeux près de chez vous</h3>
+  <%= image_tag 'logo_rent_a_game_white.svg', class: "logo" %>
+  <h3>Louez des jeux près de chez vous</h3>
+
+
+
+<%= form_with url: root_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Cherchez un jeu"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
+
+
 <div class="btnmap"> <a href="#map"> Cherchez sur la carte</a></div>
 </div>
 </div>
