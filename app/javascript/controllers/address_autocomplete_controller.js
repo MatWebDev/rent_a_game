@@ -20,11 +20,12 @@ export default class extends Controller {
   disconnect() {
     this.geocoder.onRemove()
   }
-  
+
   #setInputValue(event) {
     this.addressTarget.value = event.result["place_name"]
   }
 
   #clearInputValue() {
     this.addressTarget.value = ""
+}
 }
