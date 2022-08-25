@@ -1,0 +1,136 @@
+.main-banner {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.card-trip > img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  
+}
+
+.card-trip h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 16px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+.card-trip-infos .card-trip-pricing {
+  position: absolute;
+  right: 16px;
+  top: -25px;
+  width: 170px;
+  background-color: $red ;
+  padding: 10px 16px;
+  border-radius: 75px;
+  text-align: center;
+  color: white; 
+  font-size: 18px;
+}
+
+.bouton {
+  position: absolute;
+  left: -980px;
+  top: -450px;
+  width: 200px;
+  align-items: center;
+  background-color: #cf464d9a;
+  padding: 9px 16px;
+  border-radius: 75px;
+  text-align: center;
+  color: $lightBG;
+  font-size: 32px;
+  transition: ease-in-out 0.4s;
+
+  &:hover {
+    color: white;
+    background-color: $red;
+  }
+}
+
+.back-home {
+  text-align: center;
+  margin-top: 30px;
+
+  a {
+    text-decoration: none;
+    color: $gray;
+    font-size: 32px;
+    font-family: Josefin Sans;
+    transition: ease-in-out 0.4s;
+    
+    &:hover {
+      color: rgb(56, 54, 54);
+      font-weight: 500;
+      border-bottom: solid rgb(56, 54, 54) 1px;
+    }
+  }
+}
+
+
+.game_owner {
+  opacity: 0.6;
+  font-size: 18px;
+}
+
+
+
+@media(max-width: 992px) {
+  .card-container {
+    width: 768px;
+    grid-template-columns: 1fr ;
+  }
+}
+
+@media(max-width: 768px) {
+  .card-container {
+    width: 700px;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 576px) {
+  .card-container {
+    width: 500px;
+    grid-template-columns: 1fr;
+  }
+}
+
+
+ 
