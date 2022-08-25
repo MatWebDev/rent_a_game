@@ -11,12 +11,12 @@
           <%= submit_tag "Search", class: "btn btn-outline-light" %>
 
         <% end %>
-      <div class="btnmap"> <a href="#map"> Cherchez sur la carte</a></div>
    </div>
  </div>
 
     <div class="main-containerok m-5">
       <h2 class="my-4 fw-bold text-center">Découvrez nos jeux disponibles à la location</h2>
+      <div class="btnmap"> <a href="#map"> Cherchez sur la carte</a></div>
         <div class="cards mb-5" style="max-width: 1064px">
           <% @games.each do |game| %>
             <% if game.disponibility %>
