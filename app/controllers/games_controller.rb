@@ -6,7 +6,9 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     @markers = @games.geocoded.map do |game|
       {
         lat: game.latitude,
-        lng: game.longitude
+        lng: game.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {game: game}),
+        image_url: helpers.asset_url("markerok1.png")
       }
     end
   end

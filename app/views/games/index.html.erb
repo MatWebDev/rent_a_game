@@ -2,6 +2,7 @@
 <div class="textbanner">
 <%= image_tag 'logo_rent_a_game_white.svg', class: "logo" %>
 <h3>Louez des jeux près de chez vous</h3>
+<div class="btnmap"> <a href="#map"> Cherchez sur la carte</a></div>
 </div>
 </div>
 
@@ -28,4 +29,11 @@
       <% end %>
 </div>
 </div>
+</div>
+<div id = "map">
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
 </div>
