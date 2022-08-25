@@ -1,21 +1,23 @@
 <div class="bloc"></div>
-<div class="main-banner" style="background-image: linear-gradient(90deg, rgba(255,255,255,0.4009978991596639) 0%, rgba(255,255,255,0.4) 100%), url(' <%= cl_image_path @game.photo.key %>')">
-  <div class="card-container">
-    <div class="card-trip">
-      <%= cl_image_tag @game.photo.key %>
-      <div class="card-trip-infos">
-        <div> 
-          <h2><%= @game.name %><em class="game_owner"><%= " de " %><%= @game.user.first_name.capitalize %></em></h2> 
-          <p><%= @game.description %></p>
-        </div>
-        <h2 class="card-trip-pricing"><%= @game.price_per_day %><%= "€ /jour" %><%= link_to 'Réserver', new_game_booking_path(@game), class: "bouton" %></h2>
+<div class="fond">
+
+<div class="card-container">
+  <div class="card-product">
+    <div class="card-product-image">
+      <%= cl_image_tag @game.photo.key, class: "product-image" %>
+    </div>
+    
+    <div class="card-product-infos">
+      <h1><%= @game.name %><em class="game_owner"><%= " de " %><%= @game.user.first_name.capitalize %></em></h1>
+      <h2><%= @game.price_per_day %><%= "€ par jour" %></h2>
+      <p><%= @game.description %></p>
+      <%= link_to 'Réserver', new_game_booking_path(@game), class: "bouton" %>
+    </div>
+  </div>
+</div>
+      <div class="back-home">
+        <%= link_to 'Revenir aux jeux', root_path %>
       </div>
       
     </div>
-
-    <div class="back-home">
-      <%= link_to 'Revenir aux jeux', root_path %>
-    </div>
-    
-  </div>
 </div>
