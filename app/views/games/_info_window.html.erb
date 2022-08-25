@@ -1,0 +1,11 @@
+<%= link_to game_path(game) do %>
+<div class="cardinfo">
+  <div class="imginfo"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url(<%= cl_image_path game.photo.key %>)"> </div>
+  <div class="nameinfo"><h2><%= game.name %></h2></div>
+  <div class="prixinfo">
+  <li><p><%= game.price_per_day %> € / jour</p></li>
+ <li><p>Proposé par <%= game.user.first_name %></p></li>
+</div>
+<% end %>
