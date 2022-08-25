@@ -12,3 +12,23 @@
   text-align: center;
   font-family: "Open Sans", sans-serif;
 }
+
+.btnmap a{
+  text-decoration: none;
+  background-color: black;
+  opacity: 70%;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  width: 180px;
+  text-align: center;
+}
+
+.btnmap {
+  display: flex;
+  justify-content: center;
+}
