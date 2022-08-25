@@ -4,8 +4,8 @@
     <div class="container">
       <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
         <%= simple_form_for [@game, @booking] do |f| %>
-          <%= f.input :starting_date, as: :string, required: false, :label => "Quand irez-vous chercher le jeu ?", input_html: {class: "datepicker", id: "range_start"} %>
-          <%= f.input :ending_date, as: :string, required: false, :label => "Quand rendrez-vous le jeu ?", input_html: {class: "datepicker", id: "range_end"} %>
+          <%= f.input :starting_date, as: :string, required: false, :label => "Choisissez vos dates de location", input_html: {class: "datepicker d-none", id: "range_start"} %>
+          <%= f.input :ending_date, as: :string, required: false, label: false, input_html: {class: "datepicker d-none", id: "range_end"} %>
           <%= f.button :submit, "Go", class: "btn btn-primary" %>
         <% end %>
       </div>
