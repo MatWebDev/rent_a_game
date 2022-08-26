@@ -10,39 +10,55 @@
                              class: "form-control",
                              placeholder: "Cherchez un jeu" %>
           <%= submit_tag "Search", class: "btn btn-primary" %>
+  <div class="banner-rent-a-game">
+    <div class="textbanner">
+      <%= image_tag 'logo_rent_a_game_white.svg', class: "logo" %>
+      <h3>Louez des jeux près de chez vous</h3>
+        <%= form_with url: root_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Cherchez un jeu"%>
+          <%= submit_tag "Search", class: "btn btn-outline-light" %>
+
         <% end %>
-        <div class="btnmap"> <a href="#map"> Cherchez sur la carte</a></div>
-       </div>
-     </div>
+   </div>
+ </div>
 
     <div class="main-containerok m-5">
       <h2 class="my-4 fw-bold text-center">Découvrez nos jeux disponibles à la location</h2>
-      <div class="cards mb-5" style="max-width: 1064px">
+      <div class="btnmap"> <a href="#map"> Cherchez sur la carte</a></div>
+        <div class="cards mb-5" style="max-width: 1064px">
           <% @games.each do |game| %>
             <% if game.disponibility %>
               <%= link_to game_path(game) do %>
                 <div class="image">
-                  <div class="card-category"
-                        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-                        url('<%= cl_image_path game.photo.key %>')">
-                  </div>
+                  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path game.photo.key %>')"></div>
+
                   <div class="nomdujeu">
                     <div><h3><%= game.name %></h3></div>
                     <div> <p>Proposé par <%= game.user.first_name %></p></div> <br>
                     <div class="descrip"><%= game.description %></div>
                     <div class="prix"><%= game.price_per_day %> <span>€/jour</span></div>
                   </div>
+
                 </div>
               <% end %>
             <% end %>
           <% end %>
-      </div>
+        </div>
     </div>
 </div>
+
 <div id = "map">
 <div style="width: 100%; height: 600px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV["MAPBOX_API_KEY"] %>"></div>
+  <div style="width: 100%; height: 600px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 
 </div>
