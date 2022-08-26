@@ -49,3 +49,31 @@
   box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
 
+.plus{
+  width: 320px;
+  height: 490px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-anonce {
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  background-color: white;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 230px;
+  font-size: 25px;
+
+}
+
+.add-anonce:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  font-size: 30px;
+}
