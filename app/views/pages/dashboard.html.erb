@@ -16,7 +16,7 @@
             <div class="descrip"><%= game.description %></div>
             <div class="prix"><%= game.price_per_day %> <span>€/jour</span></div><br>
             <% if game.disponibility == false %>
-                  <%= link_to "Remettre en location", game_path(game), data: {"turbo-method": :put} %>
+                  <%= link_to "Remettre en location", game_path(game), data: {"turbo-method": :put}, class: "bouton-loc" %>
             <% end %>
           </div>
       </div>
