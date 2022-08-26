@@ -5,7 +5,7 @@
         url(<%= cl_image_path game.photo.key %>)"> </div>
   <div class="nameinfo"><h2><%= game.name %></h2></div>
   <div class="prixinfo">
-  <li><p><%= game.price_per_day %> € / jour</p></li>
- <li><p>Proposé par <%= game.user.first_name %></p></li>
+  <li><p class="price"><%= game.price_per_day %> € par jour</p></li>
+ <li><p>Proposé par <%= game.user.first_name.capitalize %></p></li>
 </div>
 <% end %>

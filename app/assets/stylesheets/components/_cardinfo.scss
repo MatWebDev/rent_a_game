@@ -1,13 +1,29 @@
-.cardinfo {
-  width: 300px;
-  height: 200px;
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-
+.mapboxgl-popup-content {
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.699);
 }
+
+.cardinfo {
+  width: 100%;
+  height: 240px;
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  cursor: pointer;
+
+  &:hover {
+      transform: scale(1.08);
+}
+}
+
+.nameinfo {
+margin-top: 10px;
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Josefin Sans", "Work Sans", "sans-serif";
+}
+}
+
 .imginfo{
   width: 280px;
   height: 100px;
@@ -15,14 +31,42 @@
   background-position: center;
 }
 .prixinfo li{
-  font-size: 24px;
+  font-family: "Josefin Sans", "Work Sans", "sans-serif";
   color: $red;
-  font-weight: 600;
   list-style: none;
+  margin-bottom: 10px;
+}
+
+.price {
+  padding: 10px;
+  border-top: solid 1px $red;
+  border-bottom: solid 1px $red;
+  font-family: "Josefin Sans", "Work Sans", "sans-serif";
+  font-weight: 600;
+  font-size: 22px;
+
+  &:hover {
+    font-weight: bolder;
+}
   
 }
-.prixinfo li:last-child{
-  color: black;
-  font-size: 18px;
 
+.prixinfo li:last-child{
+  color: #4f585e;
+  font-size: 18px;
+  font-weight: 300;
+  opacity: 0.7;
 }
+
+a {
+  text-decoration: none;
+  color: #4f585e;
+
+  &:hover {
+    font-weight: bolder;
+    color: $red;
+    text-decoration: none;
+}
+}
+
+
