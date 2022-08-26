@@ -144,6 +144,31 @@
   margin-bottom: 40px;
 }
 
+.seb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-color: burlywood;
+  width: 50vw;
+  margin-left: 120px;
+  h3 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+}
+
+.seb-img-container {
+  width: 360px;
+  height: 360px;
+  background-image: url("jaipasditca");
+  background-position: center;
+  border-radius: 50%;
+}
+
+.seb-text {
+  margin-left: 50px;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
