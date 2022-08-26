@@ -1,19 +1,20 @@
 .dashboard-card{
   width: 100vw;
   height: auto;
-  background-color: white;
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
+  // background-color: white;
   padding: 15px;
+  border-bottom: solid 2px white;
 }
 .dashboard-card li{
   list-style: none;
   font-size: 18px;
   color: darkred;
 }
+
+.dashboard-card h2 {
+  margin-left: 100px;
+}
+
 .gras{
   font-size: 18px;
   font-weight: 600;
@@ -23,7 +24,7 @@
 }
 
 .bouton-loc {
-  border: solid 2px #cfd2cf9a;
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
   background-color: white;
   padding: 15px;
   width: 182px;
@@ -44,6 +45,6 @@
 
 .bouton-loc:hover {
   border: 1px;
-  transform: scale(1.0);
+  transform: scale(1.04);
   box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
