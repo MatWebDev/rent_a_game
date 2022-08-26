@@ -8,7 +8,7 @@ class GamesController < ApplicationController
         lat: game.latitude,
         lng: game.longitude,
         info_window: render_to_string(partial: "info_window", locals: { game: game }),
-        image_url: helpers.asset_url("markerok1.png")
+        image_url: helpers.asset_url("markerok1.png"),
       }
     end
     if params[:query].present?

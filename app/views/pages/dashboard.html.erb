@@ -30,6 +30,17 @@
     <% current_user.bookings.each do |booking| %>
       <div class="image">
         <div class="card-category"
+              style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+              url('<%= cl_image_path booking.game.photo.key %>')">
+        </div>
+        <div class="nomdujeu">
+        <div><h3><%= booking.game.name %></h3></div>
+        <div> <p>Proposé par <%= booking.game.user.first_name %></p></div> <br>
+        <div class="descrip"><%= booking.game.description %></div>
+        <% rent_time = booking.ending_date.mjd - booking.starting_date.mjd + 1 %>
+        <% total_price = booking.game.price_per_day * rent_time %>
+        <div class="prix">Total : <%= total_price %> <span>€</span></div>
+
           style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
           url('<%= cl_image_path booking.game.photo.key %>')">
         </div>
