@@ -23,14 +23,14 @@
               <%= link_to game_path(game) do %>
                 <div class="image">
                   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path game.photo.key %>')"></div>
-                  
+
                   <div class="nomdujeu">
                     <div><h3><%= game.name %></h3></div>
                     <div> <p>Proposé par <%= game.user.first_name %></p></div> <br>
                     <div class="descrip"><%= game.description %></div>
                     <div class="prix"><%= game.price_per_day %> <span>€/jour</span></div>
                   </div>
-                  
+
                 </div>
               <% end %>
             <% end %>
