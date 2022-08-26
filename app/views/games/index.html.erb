@@ -6,7 +6,7 @@
         <%= form_with url: root_path, method: :get, class: "d-flex" do %>
           <%= text_field_tag :query,
                              params[:query],
-                             class: "form-control",
+                             class: "form-control-searchbar",
                              placeholder: "Cherchez un jeu" %>
           <%= submit_tag "Rechercher", class: "btn btn-outline-light" %>
         <% end %>
