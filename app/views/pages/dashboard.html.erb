@@ -44,6 +44,7 @@
           <div class="prix">Total : <%= total_price %> <span>€</span></div>
           <div style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
             url('<%= cl_image_path booking.game.photo.key %>')"> </div>
+            <div class="rent-time"><%= booking.starting_date %><%= " - " %><%= booking.ending_date %></div>
         </div>
       </div>
     <% end %>
