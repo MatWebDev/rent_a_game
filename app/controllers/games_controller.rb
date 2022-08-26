@@ -3,6 +3,8 @@ class GamesController < ApplicationController
 
   def index
     @games = Game.all
+    # @games_count = @games.count
+    # @dispo_count = 0
     @markers = @games.geocoded.map do |game|
       {
         lat: game.latitude,
@@ -31,7 +33,7 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new(game_params)
-    @game.disponibility = true
+    @game.disponibility = true # à voir si on peut supprimer cette ligne
     @game.user = current_user
     if @game.save!
       redirect_to dashboard_path, notice: "Votre annonce a bien été créée."
