@@ -33,7 +33,7 @@
         <div><h3><%= booking.game.name %></h3></div>
         <div> <p>Proposé par <%= booking.game.user.first_name %></p></div> <br>
         <div class="descrip"><%= booking.game.description %></div>
-        <% rent_time = booking.ending_date.mjd - booking.starting_date.mjd + 1%>
+        <% rent_time = booking.ending_date.mjd - booking.starting_date.mjd + 1 %>
         <% total_price = booking.game.price_per_day * rent_time %>
         <div class="prix">Total : <%= total_price %> <span>€</span></div>
         </div>
