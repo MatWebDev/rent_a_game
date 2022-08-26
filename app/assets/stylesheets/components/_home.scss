@@ -1,10 +1,3 @@
-
-*,
-*:after,
-*:before {
-	box-sizing: border-box;
-}
-
 .fond{
   background-color: $lightBG ;
 }
@@ -108,6 +101,8 @@
   -o-transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
 }
 .prix{
+  font-family: "Josefin Sans", "Work Sans", "sans-serif";
+  font-weight: 500;
   background-color: $red;
   color: white;
   width: 120px;
@@ -124,18 +119,23 @@
 }
 
 .nomdujeu{
+  font-family: "Josefin Sans", "Work Sans", "sans-serif";
   position: relative;
   padding-top: 10px;
   padding-bottom: 40px;
   margin-right: 4px;
   h3 {
     margin-top: 20px;
+    font-size: 26px;
+    font-weight: 500;
   }
   p {
-    color: grey;
+    font-family: "Josefin Sans", "Work Sans", "sans-serif";
+    color: $gray;
     margin-bottom: 0px;
-    font-size: 15px;
-    opacity: 60%;
+    font-size: 18px;
+    opacity: 0.7;
+    font-weight: 300;
   }
 }
 

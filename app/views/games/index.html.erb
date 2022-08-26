@@ -25,7 +25,7 @@
 
                   <div class="nomdujeu">
                     <div><h3><%= game.name %></h3></div>
-                    <div> <p>Proposé par <%= game.user.first_name %></p></div> <br>
+                    <div> <p>Proposé par <%= game.user.first_name.capitalize %></p></div> <br>
                     <div class="descrip"><%= game.description %></div>
                     <div class="prix"><%= game.price_per_day %> <span>€/jour</span></div>
                   </div>
