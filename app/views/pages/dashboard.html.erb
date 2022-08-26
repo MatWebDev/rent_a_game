@@ -2,6 +2,7 @@
   <h1 class="text-center mt-4" style="background: white; padding: 36px">Bienvenue <%= current_user.first_name %></h1>
 <div class="dashboard-card">
   <h2 class="mb-4"style="margin-top: 30px">Ta ludothèque en location</h2>
+  
   <div class="cards">
     <% current_user.games.each do |game| %>
       <div class="image2">
