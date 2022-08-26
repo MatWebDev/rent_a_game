@@ -19,7 +19,7 @@ body {
 
   a{
     text-decoration: none;
-    font-family: "Nunito", "Helvetica", "sans-serif";
+    font-family: "Josefin Sans", "Work Sans", "sans-serif";
     color: white;
     font-size: 18px;
     padding-left: 10px;
@@ -55,7 +55,7 @@ a:last-child {
 
   a{
     text-decoration: none;
-    font-family: "Nunito", "Helvetica", "sans-serif";
+    font-family: "Josefin Sans", "Work Sans", "sans-serif";
     color: white;
     font-size: 18px;
     padding-left: 10px;
@@ -74,16 +74,17 @@ a:last-child {
   z-index: 999;
   position: absolute;
   justify-content: space-between;
+  align-items: center;
   padding-top: 8px;
   a{
     text-decoration: none;
-    font-family: "Nunito", "Helvetica", "sans-serif";
-    color: white;
+    font-family: "Josefin Sans", "Work Sans", "sans-serif";
+    color: rgb(34, 29, 29);
     font-size: 18px;
     padding-left: 10px;
     margin-right: 10px;
     &:hover {
-      color: #ded9d9;
+      color: $gray;
 
     }
 }
@@ -99,17 +100,34 @@ a:last-child {
 
 
 .navbar-lewagon a {
-  padding-left: 0;
+  padding: 10px 10px 10px 20px;
   display: flex;
-  width: 130px;
+  width: 175px;
 }
 
-.dropdown-item{
-  color: black !important
+
+.dropdown-item-hover {
+  color: $red;
+  font-weight: 300;
+  display: inline-block;
+  position: relative;
+  color: white;
+
+  &:hover { 
+    background-color: none;
+    border-bottom: 1px solid white;
+    font-weight: 500;
+    
 }
+}
+
 .dropdown-menu{
-  border-radius: 15px !important;
+  border-radius: 4px !important;
+  background-color: rgba(255, 255, 255, 0.438);
+  border: none;
+  width: 200px;
 }
+
 .boxlogin{
   width: 60px;
 
@@ -118,4 +136,36 @@ a:last-child {
 .bloc {
   height: 60px;
   background-color: $red;
+}
+
+.dropdown-item-hover {
+  
+}
+
+.dropdown-item-hover:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.dropdown-item-hover:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.user-name {
+  text-decoration: none;
+    font-family: "Josefin Sans", "Work Sans", "sans-serif";
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 6px;
+    margin-right: 5px;
 }
