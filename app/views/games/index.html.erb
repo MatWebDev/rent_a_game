@@ -1,26 +1,14 @@
 <div class="fond">
-    <div class="banner-rent-a-game">
-      <div class="textbanner">
-        <%= image_tag "logo_rent_a_game_white.svg", class: "logo" %>
-        <h3>Louez des jeux près de chez vous</h3>
-
+  <div class="banner-rent-a-game">
+    <div class="textbanner">
+      <%= image_tag "logo_rent_a_game_white.svg", class: "logo" %>
+      <h3>Louez des jeux près de chez vous</h3>
         <%= form_with url: root_path, method: :get, class: "d-flex" do %>
           <%= text_field_tag :query,
                              params[:query],
                              class: "form-control",
                              placeholder: "Cherchez un jeu" %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
-  <div class="banner-rent-a-game">
-    <div class="textbanner">
-      <%= image_tag 'logo_rent_a_game_white.svg', class: "logo" %>
-      <h3>Louez des jeux près de chez vous</h3>
-        <%= form_with url: root_path, method: :get, class: "d-flex" do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Cherchez un jeu"%>
           <%= submit_tag "Search", class: "btn btn-outline-light" %>
-
         <% end %>
    </div>
  </div>
@@ -41,7 +29,6 @@
                     <div class="descrip"><%= game.description %></div>
                     <div class="prix"><%= game.price_per_day %> <span>€/jour</span></div>
                   </div>
-
                 </div>
               <% end %>
             <% end %>
@@ -55,10 +42,4 @@
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV["MAPBOX_API_KEY"] %>"></div>
-  <div style="width: 100%; height: 600px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
-
 </div>
