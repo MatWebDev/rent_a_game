@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
     @booking.save
     @game_booked = @booking.game
     @game_booked.update!(disponibility: false)
-    redirect_to dashboard_path
+    redirect_to dashboard_path, notice: "Votre réservation a bien été prise ne compte"
   end
 
   def destroy
