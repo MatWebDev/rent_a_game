@@ -32,3 +32,18 @@
   display: flex;
   justify-content: center;
 }
+.mapbloc{
+  margin: 0 auto;
+  width: 80%;
+  height: 630px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
